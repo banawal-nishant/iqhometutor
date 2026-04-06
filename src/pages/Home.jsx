@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/hero-tutor.png';
 import teacherImage from '../assets/teacher-iq-tutor.jpg';
+import parent1 from '../assets/parent-1.png';
+import parent2 from '../assets/parent-2.png';
+import parent3 from '../assets/parent-3.png';
+import parent4 from '../assets/parent-4.png';
 
 const Home = () => {
     return (
@@ -36,18 +40,19 @@ const Home = () => {
 
                         <div style={{ marginTop: '3rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                             <div style={{ display: 'flex' }}>
-                                {[1, 2, 3, 4].map(i => (
+                                {[parent1, parent2, parent3, parent4].map((src, i) => (
                                     <img
                                         key={i}
-                                        src={`https://i.pravatar.cc/100?img=${i + 10}`}
-                                        alt={`User ${i}`}
+                                        src={src}
+                                        alt={`Indian Parent ${i + 1}`}
                                         style={{
                                             width: '40px',
                                             height: '40px',
                                             borderRadius: '50%',
                                             border: '2px solid white',
-                                            marginLeft: i > 1 ? '-10px' : 0,
+                                            marginLeft: i > 0 ? '-10px' : 0,
                                             objectFit: 'cover',
+                                            objectPosition: 'top',
                                             background: '#cbd5e1'
                                         }}
                                     />
